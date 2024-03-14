@@ -40,7 +40,8 @@ def potencia_mayor(numero):
 def panprimo(n):
   if (n < 1023456789):
     return False
-  set_number = set([0,1,2,3,4,5,6,7,8,9])
+  # creamos un set con una lista que se genera automaticamente del 0 al 9
+  set_number = set([i for i in range(10)])
   list_number = []
   for i in sorted(str(n)):
     list_number.append(int(i))
