@@ -40,7 +40,8 @@ def potencia_mayor(numero):
 def panprimo(n):
   if (n < 1023456789):
     return False
-  set_number = set([0,1,2,3,4,5,6,7,8,9])
+  # creamos un set con una lista que se genera automaticamente del 0 al 9
+  set_number = set([i for i in range(10)])
   list_number = []
   for i in sorted(str(n)):
     list_number.append(int(i))
@@ -72,3 +73,40 @@ def practica():
   print(resultado)
 
 practica()
+def mezclador(string_a, string_b):
+  a = string_a[0:2]
+  b = string_b[-2:]
+  # aquí debes escribir el código de tu programa
+  return str(a+b) # aquí debes retornar el resultado
+
+def intercalar(string_a, string_b):
+  new_word = ""
+  for i in range(0, len(string_a)):
+    new_word += string_a[i] + string_b
+  return new_word
+
+def ocurrencias(string):
+  unos = 0
+  ceros = 0
+  for i in range(0,len(string)):
+    if string[i] == "1":
+      unos += 1
+    elif string[i] == "0":
+      ceros += 1
+  return unos - ceros # aquí debes retornar el resultado
+
+def remover_enesimo(s, n):
+  return s[:int(n)] + s[int(n)+1:]
+
+
+def reemplazo(string):
+  string = str(string)
+  new_word = ''
+  for i in range(0, len(string)):
+    if (string[i] != ' ' and string[i] == string[i].upper()):
+      new_word += "$"
+    else:
+      new_word += string[i]
+  return new_word # aquí debes retornar el resultado
+
+print(reemplazo("Viva la Vida"))
