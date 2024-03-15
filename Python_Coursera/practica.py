@@ -58,5 +58,17 @@ def panprimo(n):
     return True
   return False
 
-print(panprimo(1012344885769111))
+# print(panprimo(1012344885769111))
 # print(panprimo(2424643))
+
+
+def practica():
+  s = input("Ingresa una palabra: ")
+  resultado = ""
+  i = 0
+  while i<len(s):
+    resultado= resultado + s[len(s)-i-1]
+    i=i+1
+  print(resultado)
+
+practica()
